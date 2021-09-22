@@ -28,6 +28,10 @@ function App() {
     setTodo({title: '', content: ''})
   }
 
+  const deleteMe = (evt) => {
+    setTodos(todos.filter(todo => todo !== todos[evt.currentTarget.id]))
+  }
+
   return (
     <>
       <Header userName={"User user"} />
@@ -37,7 +41,7 @@ function App() {
           <h2>My Todos</h2>
           <div>
             {todos?.map((todo, index) => 
-              <TodoItem key={index} title={todo.title} content={todo.content} />
+              <TodoItem key={index} id={index} title={todo.title} content={todo.content} deleteMe={deleteMe} />
             )}
           </div>
         </section>

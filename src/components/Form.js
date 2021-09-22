@@ -12,10 +12,10 @@ const Form = ({ todo, setTodo, handleSubmit }) => {
     };
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
           <Input id="title" label="Title" value={todo?.title ?? ''} handleChange={handleChange} />
           <Textarea id="content" label="Content" value={todo?.content ?? ''} handleChange={handleChange} />
-          <button onClick={handleSubmit} type="submit">Add</button>
+          <button type="submit">Add</button>
         </form>
     )
 }

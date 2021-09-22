@@ -1,11 +1,11 @@
 import './TodoItem.css';
 
-const TodoItem = ({title, content}) => {
+const TodoItem = ({id, title, content, deleteMe}) => {
     return (
         <article className="todoItem">
             <h3>{title}</h3>
             <p>{content}</p>
-            <button type="button">Complete</button>
+            <button id={id} onClick={deleteMe} type="button">Complete</button>
         </article>
     )
 }
