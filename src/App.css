@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    background-color: #56d4c2;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+section.myTodos > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}

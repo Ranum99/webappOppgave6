@@ -1,0 +1,18 @@
+article.todoItem {
+    box-shadow: 0px 0px 10px 0px rgba(86,212,194,0.2);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+article.todoItem > h3 {
+    margin: 0;
+}
+
+article.todoItem > p {
+    color: gray;
+}
+
+article.todoItem > button {
+    margin-left: auto;
+}
