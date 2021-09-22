@@ -1,10 +1,8 @@
-const Textarea = ({id, label, value, setContentTodo}) => {
-    const handleChange = (evt) => {
-        setContentTodo(evt.currentTarget.value);
-    }
+const Textarea = ({id, label, value, handleChange}) => {
+
     return (
         <label htmlFor={id}>{label}
-            <textarea onChange={handleChange} id={id} value={value}></textarea>
+            <textarea name="content" onChange={handleChange} id={id} value={value}></textarea>
         </label>
     )
 }
