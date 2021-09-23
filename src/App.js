@@ -20,12 +20,16 @@ function App() {
     }
   ]);
   const [todo, setTodo] = useState({title: '', content: ''});
+  const [error, setError] = useState(false);
   
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    setTodos(todos => [...todos, todo]);
-    
-    setTodo({title: '', content: ''})
+    if(todo?.title !== '' && todo?.content !== '') {
+      setTodos(todos => [...todos, todo]);
+      setTodo({title: '', content: ''});
+      setError(false);
+    } else
+      setError(true);
   }
 
   const deleteMe = (evt) => {
@@ -36,7 +40,7 @@ function App() {
     <>
       <Header userName={"User user"} />
       <main>
-        <Form todo={todo} setTodo={setTodo} handleSubmit={handleSubmit} />
+        <Form todo={todo} setTodo={setTodo} handleSubmit={handleSubmit} error={error} />
         <section className="myTodos">
           <h2>My Todos</h2>
           <div>
